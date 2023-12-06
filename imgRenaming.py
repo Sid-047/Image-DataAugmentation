@@ -13,7 +13,7 @@ x = [glob.glob(imgDir+y) for y in ['*.jpg', '*.png', '*.tiff', '*.bmp', '*.jpeg'
 random.shuffle(x)
 
 a=0
-for i in tqdm(x, desc = "ReNamin' the Images Yo!", color = 'red'):
+for i in tqdm.tqdm(x, desc = "ReNamin' the Images Yo!", color = 'red'):
     os.rename(i, imgDir+str(a)+'.png')
     a+=1
 t2 = time.time()
