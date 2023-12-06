@@ -7,8 +7,7 @@ import time
 
 t1 = time.time()
 print("Select the Directory Yo!")
-inImg = filedialog.askopenfilename(filetypes=[("Image files", "*.jpg *.jpeg *.png *.gif *.bmp *.tiff")])
-imgDir = ('/'.join([x.replace(" ", "~") for x in inImg.split("/")[:-1]])).replace("~", " ") + '/'
+imgDir = filedialog.askdirectory() + '\\'
 print("---->", imgDir)
 x = [glob.glob(imgDir+y) for y in ['*.jpg', '*.png', '*.tiff', '*.bmp', '*.jpeg']]
 
