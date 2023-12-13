@@ -1,0 +1,26 @@
+<annotation verified="yes">
+	<folder>imgShivani</folder>
+	<filename>501.png</filename>
+	<path>E:\Aurora\ShivaniDataset\imgShivani\501.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>leftDir</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>896</xmin>
+			<ymin>118</ymin>
+			<xmax>1114</xmax>
+			<ymax>293</ymax>
+		</bndbox>
+	</object>
+</annotation>
