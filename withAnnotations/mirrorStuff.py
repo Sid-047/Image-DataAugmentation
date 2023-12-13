@@ -12,7 +12,7 @@ print("Select the Directory Yo!")
 imgDir = filedialog.askdirectory() + '//'
 print("---->", imgDir)
 x = [glob.glob(imgDir+y) for y in ['*.jpg', '*.png', '*.tiff', '*.bmp', '*.jpeg']]
-x = sum(x , [])
+x = [y for y in sum(x , []) if 'Mirror' not in y]
 for i in tqdm.tqdm(x, desc = "Mirrorin' the Images Yo!", colour = 'red'):
     t1_ = time.time()
     img = Image.open(i).convert('RGB')
@@ -51,9 +51,9 @@ for i in tqdm.tqdm(x, desc = "Mirrorin' the Images Yo!", colour = 'red'):
         yMax = int(float(bbxElement.find('ymax').text))
 
         xMin_ = xImg - xMax
-        yMin_ = yImg - yMin
+        yMin_ = yMin
         xMax_ = xImg - xMin
-        yMax_ = yImg - yMax
+        yMax_ = yMax
 
         bbxElement.find('xmin').text = str(xMin_)
         bbxElement.find('ymin').text = str(yMin_)
