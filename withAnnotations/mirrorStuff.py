@@ -41,9 +41,6 @@ for i in tqdm.tqdm(x, desc = "Mirrorin' the Images Yo!", colour = 'red'):
 
     objectElements = root.findall('object')
     for objectElement in objectElements:
-        nameElement = objectElement.find('name')
-        clsName = nameElement.text
-        nameElement = objectElement.find('name')
         bbxElement = objectElement.find('bndbox')
         xMin = int(float(bbxElement.find('xmin').text))
         yMin = int(float(bbxElement.find('ymin').text))
