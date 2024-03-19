@@ -9,7 +9,11 @@ import time
 
 t1 = time.time()
 print("Select the Directory Yo!")
-imgDir = filedialog.askdirectory() + '//'
+imgDir = filedialog.askdirectory()
+if "\\" in imgDir:
+    imgDir = imgDir + '\\'
+else:
+    outDir = imgDir + '/'
 print("---->", imgDir)
 x = [glob.glob(imgDir+y) for y in ['*.jpg', '*.png', '*.tiff', '*.bmp', '*.jpeg']]
 x = [y for y in sum(x , []) if 'Mirror' not in y]
